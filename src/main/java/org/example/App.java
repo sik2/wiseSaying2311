@@ -36,8 +36,12 @@ public class App {
                 lastId++;
             } else if (command.equals("목록")) {
                 System.out.println("번호 / 작가 / 명언");
-                System.out.println("----------------------");
-                System.out.println(wiseSayingList.size());
+                System.out.println("-".repeat(30));
+                for (int i = 0; i < wiseSayingList.size(); i++) {
+                    WiseSaying wiseSaying = wiseSayingList.get(i);
+                    System.out.printf("%d, %s, %s\n", wiseSaying.getId(), wiseSaying.getAuthor(), wiseSaying.getContent() );
+                }
+
             }
         }
     }
